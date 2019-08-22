@@ -1,6 +1,8 @@
 package com.example.imc;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -67,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
                     .getColor(R.color.obeso3));
         }
 
+    }
+
+    public void trocaActivity(View v){
+        Intent intent = new Intent(this, InfoActivity.class);
+        intent.putExtra("RESULTADO","22.6");
+        startActivity(intent);
     }
 
 
